@@ -121,14 +121,38 @@ button:hover {
 
 /*productos*/
 
-#productos{
+#search-label{
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+}
+
+#search-input,#search-btn,select{
+  font-size:1rem;
+  margin: .5rem .1rem;
+  cursor:pointer;
+}
+
+select{
+  padding: 1px 0;
+}
+
+#search-input{
+  width:80%;
+}
+
+#products{
   display:flex;
   flex-wrap:wrap;
+  justify-content:center;
   gap:1.5rem;
 }
 
-.libro{
+.book{
+  display:flex;
+  flex-direction:row;
   flex: 1 1 calc(25% - 20px);
+  max-width: calc(25% - 20px);
   font-size:.8rem;
   text-align: center;
   background-color:#F3F8FF;
@@ -138,26 +162,67 @@ button:hover {
   -webkit-backdrop-filter: blur( 3.5px );
   border-radius: 10px;
   border: 1px solid #7E30E1;
+  min-width:150px;
+}
+
+.book p {
+  min-height: 20px;
+  padding:0 .3em;
+  overflow:hidden;
+}
+
+div p:nth-child(2) {
+  min-height: 80px;
+  overflow:hidden;
   display: -webkit-box;
   -webkit-line-clamp: 4;
   line-clamp:4;
   -webkit-box-orient: vertical;
-  min-width:150px;
-}
-
-.libro p {
-  min-height: 40px;
-  overflow:hidden;
 }
 
 img{
-  height:12.5rem;
+  height:198px;
+  width:128px;
   padding:.1em;
+}
+
+.product-extra{
+  display:none;
+  min-width:150px;
+  border-left: 1px double #7E30E1;
+}
+
+.product-extra > p{
+  margin-bottom:2em;
+
+}
+
+.product-extra .description{
+  -webkit-line-clamp: 11;
+  line-clamp:11;
+}
+
+.product-extra p:first-of-type{
+  margin-top:1em;
+}
+
+.expanded{
+  flex: 1 1 calc(50% - 20px); 
+  max-width: calc(50% - 20px);
+}
+
+.expanded div:first-child{
+  padding:0 .5rem;
+}
+
+#more-products{
+  display:block;
+  margin:.5em auto;
 }
 
 /*reseñas*/
 
-#reseñas{
+#reviews{
   display:grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   row-gap: 40px;
@@ -208,15 +273,14 @@ input,textarea{
   width:75%;
 }
 
-/*queries*/
-/*
-@media (min-width:1200px){
-  ul{
-    gap:3em;
-    margin-right:3em;
-    font-size:3rem;
+@media (max-width:900px){
+  .book{
+    flex-direction:column;
   }
-}*/
+  .product-extra{
+    border:none;
+  }
+}
 
 @media (max-width:520px){
   #navbar{
@@ -224,6 +288,9 @@ input,textarea{
   }
   h2{
     font-size:3rem;
+  }
+  #search-label{
+    flex-wrap:wrap;
   }
 }
 

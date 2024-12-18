@@ -1,2 +1,1 @@
-Este proyecto simula la parte visual de un e-commerce de libros.
-No utiliza ningun tipo de framework solamente HTML y CSS vanilla.
+Este proyecto emula el front-end de un e-commerce de libros, utiliza bootstrap exclusivamente en la barra de navegacion y google books api para la carga dinamica de libros

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos</title>
     <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrap.css">	
     <link rel="stylesheet" type="text/css" href="../styles.css">
@@ -23,124 +23,22 @@
     <main>
         <section>
                 <h3>Productos</h3>
-                <div id="productos">
-                    <span class="libro">
-                        <img src="../multimedia/camino_de_los_reyes.webp" alt="el camino de los reyes">
-                        <p>El Camino de los Reyes - Brandon Sanderson</p>
-                        <p>Precio: 14.000$</p>
-                        <button>Agregar al carrito</button>
-                    </span>
-        
-                    <span class="libro">
-                        <img src="../multimedia/palabras_radiantes.webp" alt="palabras radiantes">
-                        <p>Palabras Radiantes - Brandon Sanderson</p>
-                        <p>Precio: 15.000$</p>
-                        <button>Agregar al carrito</button>
-                    </span>
-
-                    <span class="libro">
-                        <img src="../multimedia/el_aliento_de_los_dioses.webp" alt="el aliento de los dioses">
-                        <p>El aliento de los Dioses - Brandon Sanderson</p>
-                        <p>Precio: 12.000$</p>
-                        <button>Agregar al carrito</button>
-                    </span>
-
-                    <span class="libro">
-                        <img src="../multimedia/juramentada.webp" alt="juramentada">
-                        <p>Juramentada - Brandon Sanderson</p>
-                        <p>Precio: 17.000$</p>
-                        <button>Agregar al carrito</button>
-                    </span>
-
-                    <span class="libro">
-                        <img src="../multimedia/esquirla_del_amanecer.webp" alt="esquirla del amanecer">
-                        <p>Esquirla del Amanecer - Brandon Sanderson</p>
-                        <p>Precio: 8.000$</p>
-                        <button>Agregar al carrito</button>
-                    </span>
-
-                    <span class="libro">
-                        <img src="../multimedia/ritmos_de_guerra.webp" alt="el ritmo de la guerra">
-                        <p>El Ritmo de la Guerra - Brandon Sanderson</p>
-                        <p>Precio: 16.000$</p>
-                        <button>Agregar al carrito</button>
-                    </span>
-
-                    <span class="libro">
-                        <img src="../multimedia/el_hombre_iluminado.webp" alt="el hombre iluminado">
-                        <p>El hombre Iluminado - Brandon Sanderson</p>
-                        <p>Precio: 8.000$</p>
-                        <button>Agregar al carrito</button>
-                    </span>
-
-                    <span class="libro">
-                        <img src="../multimedia/el_ultimo_deseo.webp" alt="el ultimo deseo">
-                        <p>El Ultimo Deseo - Andrzej Sapkowski</p>
-                        <p>Precio: 10.000$</p>
-                        <button>Agregar al carrito</button>
-                    </span>
-
-                    <span class="libro">
-                        <img src="../multimedia/estacion_de_tormentas.webp" alt="estacion de tormentas">
-                        <p>Estacion de Tormentas - Andrzej Sapkowski</p>
-                        <p>Precio: 10.000$</p>
-                        <button>Agregar al carrito</button>
-                    </span>
-                    
-                    <span class="libro">
-                        <img src="../multimedia/la_espada_del_destino.webp" alt="la espada del destino">
-                        <p>La Espada del Destino - Andrzej Sapkowski</p>
-                        <p>Precio: 12.000$</p>
-                        <button>Agregar al carrito</button>
-                    </span>
-
-                    <span class="libro">
-                        <img src="../multimedia/la_sangre_de_los_elfos.jpg" alt="la sangre de los elfos">
-                        <p>La Sangre de los Elfos - Andrzej Sapkowski</p>
-                        <p>Precio: 13.000$</p>
-                        <button>Agregar al carrito</button>
-                    </span>
-
-                    <span class="libro">
-                        <img src="../multimedia/tiempo_de_odio.webp" alt="tiempo de odio">
-                        <p>Tiempo de Odio - Andrzej Sapkowski</p>
-                        <p>Precio: 15.000$</p>
-                        <button>Agregar al carrito</button>
-                    </span>
-
-                    <span class="libro">
-                        <img src="../multimedia/bautismo_de_fuego.webp" alt="bautismo de fuego">
-                        <p>Bautismo de Fuego - Andrzej Sapkowski</p>
-                        <p>Precio: 14.000$</p>
-                        <button>Agregar al carrito</button>
-                    </span>
-
-                    <span class="libro">
-                        <img src="../multimedia/la_torre_de_la_golondrina.webp" alt="la torre de la golondrina">
-                        <p>La Torre de la Golondrina - Andrzej Sapkowski</p>
-                        <p>Precio: 13.000$</p>
-                        <button>Agregar al carrito</button>
-                    </span>
-
-                    <span class="libro">
-                        <img src="../multimedia/la_dama_del_lago.webp" alt="la dama del lago">
-                        <p>La Dama del Lago - Andrzej Sapkowski</p>
-                        <p>Precio: 14.000$</p>
-                        <button>Agregar al carrito</button>
-                    </span>
-
-                    <span class="libro">
-                        <img src="../multimedia/camino_sin_retorno.webp" alt="camino sin retorno">
-                        <p>Camino Sin Retorno - Andrzej Sapkowski</p>
-                        <p>Precio: 14.000$</p>
-                        <button>Agregar al carrito</button>
-                    </span>
-                </div>
+                <label id="search-label">
+                    <input type="search" placeholder="Busque aquí" id="search-input">
+                    <select id="search-type">
+                        <option value="title">Titulo</option>
+                        <option value="author">Autor</option>
+                    </select>
+                    <button id="search-btn">Buscar</button>
+                </label>
+                <div id="products"></div>
+                <button id="more-products">Cargar mas resultados</button>
             </section>
     </main>
     <footer>
         <p>© 2024 Digitaly. All rights reserved.</p>
         <p>Este es un proyecto de <a href="https://github.com/SayVega">Santiago Vega</a> para Talento Tech.</p>
     </footer>
+    <script src="../js/productos.js"></script>
 </body>
 </html>
